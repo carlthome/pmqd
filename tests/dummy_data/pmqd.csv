@@ -1,0 +1,5 @@
+id,genre,artist,title,degradation_type,degradation_intensity,rating,sample_start,sample_filename
+0,Acoustic,Snow Dept.,One More Holy Night,original,0.0,4.0,90,f926612aada0494aa22a024f8960ba59.wav
+1,Classical,Traditional,Mendelson On Wings Of Song,original,0.0,4.0,86,d25ea6f34d6144199f00dac739323d37.wav
+2,Electronica & Dance,Rannar Sillard,Forever Tomorrow,original,0.0,4.0,47,dc21769c45fa49a0a6d6e1fadb053103.wav
+3,Hip Hop,Da Tooby,Midnight Breaks 3,original,0.0,4.0,115,f2036ed7cb834a8fbbbfe335eb89d53c.wav
