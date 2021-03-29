@@ -1,6 +1,5 @@
-from pkg_resources import resource_stream
-
 import pandas as pd
+from pkg_resources import resource_stream
 
 from . import degradation
 

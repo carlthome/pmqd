@@ -1,12 +1,12 @@
 # Perceived Music Quality Dataset (PMQD)
 
 ## Intro
-This is the dataset produce for the paper [Perceiving Music Quality with
-GANs](https://arxiv.org/abs/2006.06287) [[1]](#1) in collaboration between
-Peltarion and Epidemic Sound. The purpose is to evaluate methods for quality
-rating music. It contains 975 segments from songs across 13 genres, with
-degradations of various intensity applied. Each clip has an associated human
-perceived quality rating, from 1 (`Bad`) to 5 (`Excellent`), which is the
+This repository contains the dataset produced for the paper [Perceiving Music
+Quality with GANs](https://arxiv.org/abs/2006.06287) [[1]](#1) in collaboration
+between Peltarion and Epidemic Sound. The purpose is to evaluate methods for
+quality rating music. It contains 975 segments from songs across 13 genres,
+with degradations of various intensities applied. Each clip has an associated
+human perceived quality rating, from 1 (`Bad`) to 5 (`Excellent`), which is the
 median value of the rating assigned by 5 different people.
 
 
@@ -18,13 +18,13 @@ code to load the data in both PyTorch and Tensorflow.
 
 ### Contents
 The following data is hosted in the
-[releases](https://github.com/Peltarion/pqdm/releases/) of this GitHub repo:
+[releases](https://github.com/Peltarion/pmqd/releases/) of this GitHub repo:
 
 | URL                                                                     | Description                                                                |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| https://github.com/Peltarion/pqdm/releases/latest/download/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
-| https://github.com/Peltarion/pqdm/releases/latest/download/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
-| https://github.com/Peltarion/pqdm/releases/latest/download/metadata.csv | Metadata (ratings and song information).                                   |
+| https://github.com/Peltarion/pmqd/releases/latest/download/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
+| https://github.com/Peltarion/pmqd/releases/latest/download/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
+| https://github.com/Peltarion/pmqd/releases/latest/download/pmqd.csv     | Metadata (ratings and song information).                                   |
 
 ### Torch
 Install `pmqd` with additional [PyTorch](https://pytorch.org/) and
@@ -114,12 +114,12 @@ The metadata table contains the following columns:
 
 
 ### Source
-The original audio is from the Epidemic Sound catalogue, an online service with
+The original audio is from the Epidemic Sound catalog, an online service with
 professionally produced, high-quality music. It contains a wide range of music
 and is curated to conform well to contemporary music, as it is intended for use
-by content creators. Using their catalog we created a balanced dataset of
+by content creators. Using their catalog, we created a balanced dataset of
 mutually exclusive genres by randomly sampling 5 songs from each selected
-genre. For each songs we then randomly sample 3 segments of constant length,
+genre. For each song, we then randomly sample 3 segments of constant length,
 approximately 4 seconds in duration.
 
 
@@ -172,32 +172,32 @@ our dataset thus consists of the following number of samples:
 To annotate the music segments with their human perceived listening quality we
 turn to crowdsourcing the task on Amazon Mechanical Turk (_AMT_). This has the
 advantage of allowing significantly larger scale than controlled tests, though
-introduces some potential problems such as cheating and under performing
+introduces some potential problems such as cheating and underperforming
 participants, which we handle as described in this section.
 
 #### Task assignment
 Tasks to be completed by human participants are created to rate segments for
 their listening quality. Segments are randomly assigned to tasks such that each
-task contains 10 segments, never contains duplicates and each segment occurs in
-at least 5 tasks. Participants may only perform one task, in order to avoid
-individuals biases. In total we produce 488 tasks resulting in 4880 individual
+task contains 10 segments, never contains duplicates, and each segment occurs in
+at least 5 tasks. Participants may only perform one task in order to avoid
+individuals biases. In total, we produce 488 tasks resulting in 4880 individual
 segment evaluations.
 
 #### Task specification
 During a task, each participant is asked to specify which type of device they
 will use for listening from the list: `smartphone speaker`, `speaker`,
 `headphones`, `other`, `will not listen`. If any other option than `speaker` or
-`headphones` was selected that submission is rejected and the task re-assigned.
-For each segment in the task we ask the user for an assessment of audio
-quality, not musical content[[2]](#2). The question is phrased as: _"How do you
-rate the audio quality of this music segment?"_, and may be answered on the
-ordinal scale: _Bad_, _Poor_, _Fair_, _Good_ and _Excellent_, corresponding to
-the numerical values 1, 2, 3, 4, 5.
+`headphones` was selected, the submission was rejected and the task
+re-assigned.  For each segment in the task, we ask the user for an assessment
+of audio quality, not musical content[[2]](#2). The question is phrased as:
+_"How do you rate the audio quality of this music segment?"_, and may be
+answered on the ordinal scale: _Bad_, _Poor_, _Fair_, _Good_ and _Excellent_,
+corresponding to the numerical values 1, 2, 3, 4, 5.
 
 #### Rating aggregation
-Once all tasks are completed the ratings are aggregated to produce one
+Once all tasks are completed, the ratings are aggregated to produce one
 perceived quality rating per segment. Since participants are listening in their
-own respective environments we are concerned with lo-fi audio equipment, or
+own respective environments, we are concerned with lo-fi audio equipment or
 scripted responses trying to game _AMT_. Thus we use the median over the mean
 rating to discount outliers.
 
@@ -218,12 +218,12 @@ participants not following instructions:
 
 
 ### Dataset summary
-The following are the average ratings assigned, by degradation intensity and
+The following are the average ratings assigned by degradation intensity and
 distortion type. As expected, some degradations (distortion and noise) have a
 much larger impact on the quality than others. Furthermore, we note that the
 original tracks are on average rated below the excellent quality mark, despite
-being high-fidelity recordings. Part of this could be explained by user
-expectation.
+being high-fidelity recordings. Part of this could be explained by the
+annotators expectations.
 
 | Degradation intensity   |   Distortion |   Limiter |   Lowpass |   Noise |   Original |
 |:------------------------|-------------:|----------:|----------:|--------:|-----------:|

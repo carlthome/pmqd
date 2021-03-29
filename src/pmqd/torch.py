@@ -36,6 +36,7 @@ class PMQD(Dataset):
         folder_in_archive: The top-level directory of the dataset.
         download: Whether to download the dataset if it is not found at root path.
     """
+
     SAMPLE_RATE = 48000
 
     def __init__(
