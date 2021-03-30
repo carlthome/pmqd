@@ -51,6 +51,11 @@ for batch in dataloader:
 ```
 
 ### TFDS
+This requires [ffmpeg](https://ffmpeg.org/) on the target system, and has to be
+installed manually install manually (e.g. for MacOS do `brew install ffmpeg`
+([formula](https://formulae.brew.sh/formula/ffmpeg))). Alternatively,
+see the [docker instructions](#docker) below.
+
 Install `pmqd` with additional [Tensorflow](http://tensorflow.org/) and
 [Tensorflow Datasets](https://www.tensorflow.org/datasets) dependencies:
 
@@ -74,8 +79,21 @@ for batch in dataset:
     ...
 ```
 
+### Docker
+The repository contains an appropriate docker image with all dependencies
+required for both `tfds` and `torch`. It can be built directly from the
+repository. To build and open a promp inside it, do:
+
+```console
+docker build --target pmqd -t pmqd https://github.com/Peltarion/pmqd.git
+docker run -it pmqd bash
+```
+
 ### Examples
-Link to example notebook.
+Example notebooks for usage with `tfds` and `torch:`
+
+- [tfds.ipynb](./notebooks/tfds.ipynb)
+- [torch.ipynb](./notebooks/torch.ipynb)
 
 
 ## Data
@@ -142,8 +160,8 @@ JSFX](https://www.reaper.fm/sdk/js) audio plugins:
 Plugins were applied separately to each segment without effects chaining. The
 parameter of each plugin is rescaled to [0, 100] and considered the intensity
 of the degradation.
-[notebooks/degrade_audio.ipynb](notebooks/degrade_audio.ipynb) contains the
-code used to degrade the original music segments.
+[notebooks/degrade_audio.ipynb](notebooks/degrade_audio.ipynb) shows how to use
+the code used to degrade the original music segments.
 
 From each original segment described in [Source](#source), we produce degraded
 versions of each type of degradation with a randomly sampled intensity from the

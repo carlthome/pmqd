@@ -19,7 +19,6 @@ def test_torchaudio_no_dowload(tmp_path: Path):
 def test_torchaudio_download(tmp_path: Path, dummy_data: Dict[str, Path]):
     def mock_download_url(url: str, download_folder: str, hash_value: str) -> None:
         filename = os.path.basename(url)
-        print("filename", filename)
         shutil.copy(dummy_data[filename], download_folder)
 
     with patch("pmqd.torch.download_url", wraps=mock_download_url) as mocked:
