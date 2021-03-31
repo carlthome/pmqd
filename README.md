@@ -52,7 +52,7 @@ for batch in dataloader:
 
 ### TFDS
 This requires [ffmpeg](https://ffmpeg.org/) on the target system, and has to be
-installed manually install manually (e.g. for MacOS do `brew install ffmpeg`
+installed manually (e.g. for MacOS do `brew install ffmpeg`
 ([formula](https://formulae.brew.sh/formula/ffmpeg))). Alternatively,
 see the [docker instructions](#docker) below.
 
@@ -82,7 +82,7 @@ for batch in dataset:
 ### Docker
 The repository contains an appropriate docker image with all dependencies
 required for both `tfds` and `torch`. It can be built directly from the
-repository. To build and open a promp inside it, do:
+repository. To build and open a prompt inside it, do:
 
 ```console
 docker build --target pmqd -t pmqd https://github.com/Peltarion/pmqd.git
@@ -142,7 +142,7 @@ approximately 4 seconds in duration.
 
 
 ### Degrading audio quality
-To include tracks of varying quality we introduce a set of signal degradations
+To include tracks of varying quality we used a set of signal degradations
 with the following open-source [REAPER
 JSFX](https://www.reaper.fm/sdk/js) audio plugins:
 
