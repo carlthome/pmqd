@@ -12,7 +12,7 @@ low, high = resource.getrlimit(resource.RLIMIT_NOFILE)
 resource.setrlimit(resource.RLIMIT_NOFILE, (high, high))
 
 _DESCRIPTION = """
-This is the dataset produce for the paper [Perceiving Music Quality with
+This is the dataset produced for the paper [Perceiving Music Quality with
 GANs](https://arxiv.org/abs/2006.06287) in collaboration between
 Peltarion and Epidemic Sound. The purpose is to evaluate methods for quality
 rating music. It contains 975 segments from songs across 13 genres, with
