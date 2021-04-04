@@ -22,9 +22,9 @@ The following data is hosted in the
 
 | URL                                                                     | Description                                                                |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| https://github.com/Peltarion/pmqd/releases/latest/download/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
-| https://github.com/Peltarion/pmqd/releases/latest/download/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
-| https://github.com/Peltarion/pmqd/releases/latest/download/pmqd.csv     | Metadata (ratings and song information).                                   |
+| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
+| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
+| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/pmqd.csv     | Metadata (ratings and song information).                                   |
 
 ### Torch
 Install `pmqd` with additional [PyTorch](https://pytorch.org/) and

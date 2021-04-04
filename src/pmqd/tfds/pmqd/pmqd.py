@@ -33,8 +33,8 @@ _CITATION = """
 }
 """
 
-URL_AUDIO = "https://storage.googleapis.com/pmqd/audio.tgz"
-URL_METADATA = "https://storage.googleapis.com/pmqd/pmqd.csv"
+URL_AUDIO = "https://github.com/Peltarion/pmqd/releases/download/v1.0.0/audio.tgz"
+URL_METADATA = "https://github.com/Peltarion/pmqd/releases/download/v1.0.0/pmqd.csv"
 FOLDER_IN_ARCHIVE = "audio"
 
 
