@@ -85,7 +85,7 @@ required for both `tfds` and `torch`. It can be built directly from the
 repository. To build and open a prompt inside it, do:
 
 ```console
-docker build --target pmqd -t pmqd https://github.com/Peltarion/pmqd.git
+docker build --target pmqd -t pmqd https://github.com/Peltarion/pmqd.git#main
 docker run -it pmqd bash
 ```
 
