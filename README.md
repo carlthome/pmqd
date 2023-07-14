@@ -18,20 +18,20 @@ code to load the data in both PyTorch and Tensorflow.
 
 ### Contents
 The following data is hosted in the
-[releases](https://github.com/Peltarion/pmqd/releases/) of this GitHub repo:
+[releases](https://github.com/carlthome/pmqd/releases/) of this GitHub repo:
 
 | URL                                                                     | Description                                                                |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
-| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
-| https://github.com/Peltarion/pmqd/releases/download/v1.0.0/pmqd.csv     | Metadata (ratings and song information).                                   |
+| https://github.com/carlthome/pmqd/releases/download/v1.0.0/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
+| https://github.com/carlthome/pmqd/releases/download/v1.0.0/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
+| https://github.com/carlthome/pmqd/releases/download/v1.0.0/pmqd.csv     | Metadata (ratings and song information).                                   |
 
 ### Torch
 Install `pmqd` with additional [PyTorch](https://pytorch.org/) and
 [torchaudio](https://pytorch.org/audio/stable/index.html) dependencies:
 
 ```console
-> pip install git+https://github.com/Peltarion/pmqd#egg=pmqd[torch]
+> pip install git+https://github.com/carlthome/pmqd#egg=pmqd[torch]
 ```
 
 To download the dataset to `"download_directory"` and use it:
@@ -60,7 +60,7 @@ Install `pmqd` with additional [Tensorflow](http://tensorflow.org/) and
 [Tensorflow Datasets](https://www.tensorflow.org/datasets) dependencies:
 
 ```console
-> pip install git+https://github.com/Peltarion/pmqd#egg=pmqd[tfds]
+> pip install git+https://github.com/carlthome/pmqd#egg=pmqd[tfds]
 ```
 
 To download the dataset to the default `tfds` location and use it:
@@ -85,7 +85,7 @@ required for both `tfds` and `torch`. It can be built directly from the
 repository. To build and open a prompt inside it, do:
 
 ```console
-docker build --target pmqd -t pmqd https://github.com/Peltarion/pmqd.git#main
+docker build --target pmqd -t pmqd https://github.com/carlthome/pmqd.git#main
 docker run -it pmqd bash
 ```
 
