@@ -1,4 +1,4 @@
-FROM python:3.6.9 AS main
+FROM python:3.8 AS main
 
 # Install binary dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
