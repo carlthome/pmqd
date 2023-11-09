@@ -8,8 +8,9 @@ from typing import Any, Dict, Union
 
 import pandas as pd
 import torchaudio
+from torch.hub import download_url_to_file as download_url
 from torch.utils.data import Dataset
-from torchaudio.datasets.utils import download_url, extract_archive
+from torchaudio.datasets.utils import _extract_tar
 
 from . import checksums
 
@@ -56,10 +57,10 @@ class PMQD(Dataset):
         if download:
             if not self._audio_path.exists():
                 if not archive.is_file():
-                    download_url(url_audio, root, hash_value=CHECKSUM_AUDIO)
-                extract_archive(archive)
+                    download_url(url_audio, str(root), hash_prefix=CHECKSUM_AUDIO)
+                _extract_tar(str(archive))
             if not self._metadata_path.is_file():
-                download_url(url_metadata, root, hash_value=CHECKSUM_METADATA)
+                download_url(url_metadata, str(root), hash_prefix=CHECKSUM_METADATA)
 
         if not self._metadata_path.is_file():
             raise FileNotFoundError(
