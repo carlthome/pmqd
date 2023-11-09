@@ -35,6 +35,6 @@ def test_torchaudio_download(tmp_path: Path, dummy_data: Dict[str, Path]):
     assert isinstance(example["rating"], float)
 
     # Check that files are not downloaded again
-    with patch("torchaudio.datasets.utils.download_url") as patched:
+    with patch("pmqd.torch.download_url") as patched:
         dataset = PMQD(root=tmp_path, download=True)
         patched.assert_not_called()
