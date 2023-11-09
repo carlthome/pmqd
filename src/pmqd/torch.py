@@ -8,8 +8,8 @@ from typing import Any, Dict, Union
 
 import pandas as pd
 import torchaudio
-from torch.utils.data import Dataset
 from torch.hub import download_url_to_file as download_url
+from torch.utils.data import Dataset
 from torchaudio.datasets.utils import _extract_tar
 
 from . import checksums
