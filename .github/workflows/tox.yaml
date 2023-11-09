@@ -1,6 +1,4 @@
-on:
-  push:
-  pull_request:
+on: push
 jobs:
   docker:
     runs-on: ubuntu-latest
