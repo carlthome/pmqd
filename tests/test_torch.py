@@ -17,7 +17,7 @@ def test_torchaudio_no_dowload(tmp_path: Path):
 
 
 def test_torchaudio_download(tmp_path: Path, dummy_data: Dict[str, Path]):
-    def mock_download_url(url: str, download_folder: str, hash_value: str) -> None:
+    def mock_download_url(url: str, download_folder: str, hash_prefix: str) -> None:
         filename = os.path.basename(url)
         shutil.copy(dummy_data[filename], download_folder)
 
